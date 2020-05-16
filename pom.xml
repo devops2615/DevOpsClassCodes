@@ -90,7 +90,6 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-
 		
 				<!-- LOGGING -->
 		<dependency>
@@ -419,9 +418,9 @@
             <reporting>
                 <plugins>
                     <plugin>
-  <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>2.7</version>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>${cobertura.version}</version>
                         <configuration>
                             <formats>
                                 <format>html</format>
