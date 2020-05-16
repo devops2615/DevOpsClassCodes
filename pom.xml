@@ -90,13 +90,7 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-		 <dependency>
-   <groupId>com.sun</groupId>
-   <artifactId>tools</artifactId>
-   <version>1.6</version>
-   <scope>system</scope>
-   <systemPath>C:\Program Files\Java\java-se-8u41-ri\lib\tools.jar</systemPath>
- </dependency>
+
 		
 				<!-- LOGGING -->
 		<dependency>
