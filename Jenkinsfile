@@ -5,7 +5,7 @@ pipeline {
         jdk 'java'
     }
     stages {
-        stage ('Compile') {
+        stage ('Compile Step') {
             steps {
                 sh 'mvn compile' 
             }
@@ -60,6 +60,9 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 }
 
 }
+
+
+
 
 
 
