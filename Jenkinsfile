@@ -5,7 +5,7 @@ pipeline {
         jdk 'java'
     }
     stages {
-        stage ('Compile Job') {
+        stage ('Compile') {
             steps {
                 sh 'mvn compile' 
             }
