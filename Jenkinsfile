@@ -36,7 +36,6 @@ junit 'target/surefire-reports/*.xml'
             }
         }
 stage ('QAMetricCheck') {
-            agent {label 'test_label'}
             steps {
                 sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
             }
