@@ -1,11 +1,12 @@
 pipeline {
-    agent any
+    agent none
     tools {
         maven 'mymaven'
         jdk 'java'
     }
     stages {
         stage ('Compile Job') {
+            agent {label 'test_label'}
             steps {
                 sh 'mvn compile' 
             }
@@ -23,6 +24,7 @@ pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/pmd
             }
         }
 stage ('QAUnitTest') {
+			agent {label 'test_label'}
             steps {
                 sh 'mvn test'
             }
@@ -60,10 +62,3 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 }
 
 }
-
-
-
-
-
-
-
