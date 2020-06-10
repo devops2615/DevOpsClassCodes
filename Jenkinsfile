@@ -5,7 +5,7 @@ pipeline {
         jdk 'java'
     }
     stages {
-        stage ('Compile') {
+        stage ('Compile Job') {
             agent {label 'test_label'}
             steps {
                 sh 'mvn compile' 
