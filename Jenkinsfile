@@ -1,11 +1,12 @@
 pipeline {
-    agent any
+    agent none
     tools {
         maven 'mymaven'
         jdk 'java'
     }
     stages {
         stage ('Compile Job') {
+            agent {label 'test_label'}
             steps {
                 sh 'mvn compile' 
             }
@@ -34,6 +35,7 @@ junit 'target/surefire-reports/*.xml'
             }
         }
 stage ('QAMetricCheck') {
+            agent {label 'test_label'}
             steps {
                 sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
             }
