@@ -5,7 +5,7 @@ pipeline {
         jdk 'java'
     }
     stages {
-        stage ('Compile Job') {
+        stage ('Compile') {
             agent {label 'test_label'}
             steps {
                 sh 'mvn compile' 
@@ -62,5 +62,3 @@ Check console output at $BUILD_URL to view the results.''', subject: '$PROJECT_N
 }
 
 }
-
-
